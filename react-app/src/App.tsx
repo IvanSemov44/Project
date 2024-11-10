@@ -1,7 +1,7 @@
 // import { BsCalendarFill } from "react-icons/bs";
 
 import { useState } from "react";
-import ShoppingCartApp from "./components/ManagingComponentState/ShoppingCartApp";
+import FormWithState from "./components/Forms/FormWithState";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false)
@@ -18,7 +18,9 @@ function App() {
   };
 
   return (
-    <ShoppingCartApp />
+    <FormWithState />
+    // <FormWithRef />
+    // <ShoppingCartApp />
     // <Button />
     // <Like onClick={() => console.log("clicked")} />
     // <Button
