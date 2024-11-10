@@ -1,25 +1,51 @@
-import { useState } from 'react';
-import Alert from './components/Alert';
-import Button from './components/Button';
+// import { BsCalendarFill } from "react-icons/bs";
+
+import { useState } from "react";
+import Like from "./components/Like/Like";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false)
+  const items = [
+    "New York",
+    "San Francisco",
+    "Tokyo",
+    "London",
+    "Paris"
+  ];
+
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
 
   return (
-    <div>
-      <Button
-        color="secondary"
-        onClick={() => setShowAlert(true)}
-      >
-        Click me
-      </Button>
+    <Like onClick={() => console.log("clicked")} />
+    // <Button
+    //   color="secondary"
+    //   onClick={() => setShowAlert(true)}
+    // >
+    //   Click Me
+    // </Button>
 
-      {showAlert &&
-        <Alert onClose={() => setShowAlert(false)}>
-          My Alert
-        </Alert>
-      }
-    </div >
+    // <BsCalendarFill color="red" size="40" />
+    // <ListGroup
+    //   heading='New York'
+    //   items={items}
+    //   onSelectItem={handleSelectItem} />
+
+    // <div>
+    //   <Button
+    //     color="secondary"
+    //     onClick={() => setShowAlert(true)}
+    //   >
+    //     Click me
+    //   </Button>
+
+    //   {showAlert &&
+    //     <Alert onClose={() => setShowAlert(false)}>
+    //       My Alert
+    //     </Alert>
+    //   }
+    // </div >
   );
 };
 
