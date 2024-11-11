@@ -13,7 +13,7 @@ const Category = ({ setCategory, category }: Props) => {
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
                 >
-                    <option className="dropdown-item" ></option>
+                    <option className="dropdown-item" value="all">All</option>
                     <option className="dropdown-item" value="groceries">Groceries</option>
                     <option className="dropdown-item" value="utilities">Utilities</option>
                     <option className="dropdown-item" value="entertainment">Entertainment</option>

@@ -6,7 +6,7 @@ import { Todo } from './Types';
 
 const Tracker = () => {
     const [table, setTable] = useState<Todo[]>([]);
-    const [category, setCategory] = useState<string>("")
+    const [category, setCategory] = useState<string>("all")
 
     const handleTask = (data: Todo) =>
         setTable([...table, data]);
@@ -15,7 +15,7 @@ const Tracker = () => {
         setTable(table.filter(item => item.description !== description))
 
     const items = () => {
-        if (category !== "all" && category !== "")
+        if (category !== "all")
             return table.filter(item => item.category === category)
         return table;
     }

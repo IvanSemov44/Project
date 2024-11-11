@@ -17,12 +17,13 @@ interface Props {
 }
 
 const ExpenseTracker = ({ setTask }: Props) => {
-    const { register, handleSubmit, formState: { errors, isValid } }
+    const { register, handleSubmit, formState: { errors, isValid }, reset }
         = useForm<FormData>({ resolver: zodResolver(schema) });
 
     const onSubmit = (data: FieldValues) => {
         setTask(data as Todo);
         // console.log(data)
+        reset();
     }
 
     return (

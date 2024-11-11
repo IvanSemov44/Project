@@ -32,6 +32,12 @@ const Table = ({ items, onDelete }: Props) => {
                         </td>
                     </tr>
                 )}
+                <tr >
+                    <td>Total</td>
+                    <td>${items.reduce((total, item) => total + item.amount, 0)}</td>
+                    <td />
+                    <td />
+                </tr>
             </tbody>
         </table>
     )
