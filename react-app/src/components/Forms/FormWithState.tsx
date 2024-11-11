@@ -12,25 +12,26 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const FormWithState = () => {
-    const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({ resolver: zodResolver(schema) });
+    const { register, handleSubmit, formState: { errors, isValid } }
+        = useForm<FormData>({ resolver: zodResolver(schema) });
 
     const onSubmit = (data: FieldValues) => console.log(data)
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb5">
-                <label htmlFor="name" className="form-lable" >Name</label>
+                <label htmlFor="name" className="form-label" >Name</label>
                 <input
                     id="name"
                     type="text"
                     className="form-control"
-                    {...register("name",)}
+                    {...register("name")}
                 />
                 {errors.name && <p className="text-danger">{errors.name.message}</p>}
             </div>
 
             <div className="mb3">
-                <label htmlFor="age" className="form-lable" >Age</label>
+                <label htmlFor="age" className="form-label" >Age</label>
                 <input
                     id="age"
                     type="number"

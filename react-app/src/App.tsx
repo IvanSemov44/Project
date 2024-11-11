@@ -1,7 +1,7 @@
 // import { BsCalendarFill } from "react-icons/bs";
 
 import { useState } from "react";
-import FormWithState from "./components/Forms/FormWithState";
+import Tracker from "./components/ExpenseTracker/Tracker";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false)
@@ -18,7 +18,8 @@ function App() {
   };
 
   return (
-    <FormWithState />
+    <Tracker />
+    // <FormWithState />
     // <FormWithRef />
     // <ShoppingCartApp />
     // <Button />
